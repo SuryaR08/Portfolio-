@@ -1,0 +1,15 @@
+{
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "surya",
+  "license": "ISC",
+  "dependencies": {
+    "@emailjs/browser": "^3.11.0",
+    "dotenv": "^16.1.4"
+  }
+}
