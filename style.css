@@ -18,7 +18,7 @@
   /* Hero section background image */
   .hero {
     height: 100vh;
-    background-image: url("../images/home-bg.jpg");
+    background-image: url("./images/home-bg.jpg");
     background-repeat: no-repeat;
     background-position: 60% 0%;
     background-size: cover;
@@ -80,7 +80,7 @@
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    background-image: url("../images/contact-bg.jpeg");
+    background-image: url("./images/contact-bg.jpeg");
   }
   
   @media screen and (max-width: 990px) {
