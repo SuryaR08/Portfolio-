@@ -2,7 +2,7 @@
 
 Welcome to my portfolio website project! This website showcases my education, qualifications, CV/Resume, projects, and achievements. It is designed using HTML, CSS, and JavaScript to provide an interactive and visually appealing experience for visitors.
 
-[![Portfolio Website](https://github.com/SuryaR08/Portfolio-/blob/main/images/banner.png)](https://suryar08.github.io/Portfolio-/)
+[![Portfolio Website](https://github.com/SuryaR08/Portfolio-/blob/main/images/banner.png)](https://suryar08.netlify.app/)
 
 ## Features
 
