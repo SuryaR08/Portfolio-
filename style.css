@@ -4,24 +4,27 @@
     --gray-color: #ccc;
   }
   
-  body {
-    background: var(--bg-color) !important;
-    scroll-behavior: smooth;
-  }
+
   
   .nav-item .nav-link {
     color: var(--white-color);
   }
   
-  .hero {
-    height: 100vh;
-    background-image: url("./images/tech.png");  
-    background-repeat: no-repeat;
-    background-position: 60% 0%;
-    background-size: cover;
-    background-attachment: fixed;
+/* Default Light Mode (Background Image) */
+.hero {
+  height: 100vh;
+  background-image: url("./images/techwhite.png");
+  background-repeat: no-repeat;
+  background-position: 60% 0%;
+  background-size: cover;
+  background-attachment: fixed;
+}
 
-  }
+/* Dark Mode (Background Image) */
+body.dark-mode .hero {
+  background-image: url("./images/tech.png");
+}
+
   
   #skills i {
     height: 100px;
@@ -177,3 +180,292 @@
   color: #6c757d;
 }
 
+body {
+  transition: background-color 0.4s ease, color 0.4s ease; 
+  scroll-behavior: smooth;
+}
+
+body.light-mode {
+  background-color: #fff;
+  color: #000;
+}
+
+body.light-mode h2 {
+  color: black;
+}
+
+body.light-mode h4 {
+  color: black;
+}
+
+body.light-mode li {
+  color: black;
+}
+
+body.dark-mode {
+  background-color: #000;
+  color: #fff;
+}
+
+body.dark-mode h2 {
+  color: white;
+}
+
+body.dark-mode li {
+  color: white;
+}
+
+body.dark-mode h4 {
+  color: white;
+}
+
+
+
+/* Default Light Mode Text Styles */
+.hero h2, .hero h4 {
+  color: #000 !important; /* Black text for light mode */
+}
+
+/* Dark Mode Text Styles */
+body.dark-mode .hero h2, 
+body.dark-mode .hero h4 {
+  color: #fff !important; /* White text for dark mode */
+}
+
+
+/* Container for the toggle switch */
+.toggle-container {
+  display: flex;
+  justify-content: flex-start; /* Align the elements */
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  padding-left: 15px; /* Space to the left of the toggle container */
+  padding-right: 20px; /* Space to the right of the toggle container */
+}
+
+/* Style for the toggle switch */
+.toggle-checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.toggle-slot {
+  position: relative;
+  height: 2.5em; /* Maintain current height */
+  width: 5.5em; /* Adjust width to fit the toggle button and icons */
+  border: 3px solid #e4e7ec;
+  border-radius: 10em;
+  background-color: white;
+  box-shadow: 0px 6px 15px #e4e7ec;
+  transition: background-color 250ms;
+  bottom: 0.5em;
+}
+
+/* When the checkbox is checked (dark mode) */
+.toggle-checkbox:checked ~ .toggle-slot {
+  background-color: #374151;
+  width: 5.5em;
+}
+
+/* Toggle Button */
+.toggle-button {
+  transform: translate(0.3em, 0.3em); /* Position it on the left by default */
+  position: absolute;
+  height: 1.5em; /* Reduced size */
+  width: 1.5em;  /* Reduced size */
+  border-radius: 50%;
+  background-color: #ffeccf;
+  box-shadow: inset 0px 0px 0px 0.5em #ffbb52;
+  transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.26, 2, .46, .71);
+}
+
+/* Toggle button position when checkbox is checked (dark mode) */
+.toggle-checkbox:checked ~ .toggle-slot .toggle-button {
+  background-color: #485367;
+  box-shadow: inset 0px 0px 0px 0.5em white;
+  transform: translate(3.4em, 0.3em); /* Position to the right in dark mode */
+  left: 0em;
+}
+
+/* Sun icon */
+.sun-icon {
+  position: absolute;
+  height: 1.4em; /* Slightly smaller */
+  width: 1.4em;  /* Slightly smaller */
+  color: #ffbb52;
+}
+
+.sun-icon-wrapper {
+  position: absolute;
+  height: 1.4em; /* Reduced size */
+  width: 1.4em;  /* Reduced size */
+  opacity: 1;
+  transform: translate(3.5em, 0.3em) rotate(15deg); /* Adjusted position to the right */
+  transform-origin: 50% 50%;
+  transition: opacity 150ms, transform 500ms cubic-bezier(.26, 2, .46, .71);
+
+}
+
+/* When toggle is checked, hide sun icon */
+.toggle-checkbox:checked ~ .toggle-slot .sun-icon-wrapper {
+  opacity: 0;
+  transform: translate(0.3em, 0.3em) rotate(0deg);
+}
+
+/* Moon icon */
+.moon-icon {
+  position: absolute;
+  height: 1.4em; /* Slightly smaller */
+  width: 1.4em;  /* Slightly smaller */
+  color: white;
+}
+
+.moon-icon-wrapper {
+  position: absolute;
+  height: 1.4em; /* Reduced size */
+  width: 1.4em;  /* Reduced size */
+  opacity: 0;
+  transform: translate(0.3em, 0.3em) rotate(0deg); /* Position moon to the left initially */
+  transform-origin: 50% 50%;
+  transition: opacity 150ms, transform 500ms cubic-bezier(.26, 2.5, .46, .71);
+}
+
+/* When checkbox is checked (dark mode), show moon icon and position it on the left */
+.toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper {
+  opacity: 1;
+  transform: translate(0.3em, 0.3em) rotate(-15deg); /* Position moon to the left */
+}
+
+/* When toggle is checked (dark mode), show sun icon and position it on the right */
+.toggle-checkbox:checked ~ .toggle-slot .sun-icon-wrapper {
+  opacity: 1;
+  transform: translate(3.5em, 0.3em) rotate(15deg); /* Position sun to the right */
+}
+
+
+
+
+/* Dark Mode */
+body.dark-mode label {
+  color: black !important; /* White labels for dark mode */
+}
+
+
+
+header.light-mode{
+  background-color: 5px solid white;
+  position: fixed;
+  position: fixed; /* Keeps the header fixed at the top */
+  top: 0; /* Positions the header at the top of the viewport */
+  left: 0; /* Ensures the header starts from the left edge */
+  width: 100%; /* Makes the header span the full width of the page */
+  z-index: 1000; /* Ensures the header is above other content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+header.dark-mode{
+  background-color: #000;
+}
+
+/* Light Mode */
+body.light-mode .navbar {
+  position: fixed; /* Fix navbar at the top */
+  top: 0; /* Position the navbar at the top */
+  left: 0; /* Align to the left */
+  width: 100%; /* Make navbar full width */
+  background-color: white !important; /* Navbar background in light mode */
+  color: black !important; /* Navbar text color in light mode */
+  z-index: 9999; /* Ensure navbar stays on top */
+  border-radius: 0; /* No border-radius */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add shadow for better visibility */
+  padding-left: 0; /* Remove any padding on the left */
+  padding-right: 0; /* Remove any padding on the right */
+  max-width: 1900px;
+}
+
+/* Left-aligned brand and toggle button */
+body.light-mode .navbar .container-fluid {
+  display: flex;
+  justify-content: space-between; /* Space out the left and right elements */
+  align-items: center;
+}
+
+body.light-mode .navbar .navbar-brand {
+  color: black !important; /* Navbar brand color in light mode */
+  margin-left: 0; /* Ensure no margin on the left */
+}
+
+body.light-mode .navbar .toggle-container {
+  margin-left: 0; /* Ensure toggle is at the leftmost */
+}
+
+/* Navbar Links */
+body.light-mode .navbar .navbar-nav {
+  margin-left: auto; /* Push nav items to the right */
+}
+
+body.light-mode .navbar .nav-link {
+  color: black !important; /* Navbar links color in light mode */
+  margin-right: 20px; /* Add space between links */
+}
+
+body.light-mode .navbar .nav-link:hover {
+  color: #007bff !important; /* Accent color on hover */
+  text-decoration: none;
+}
+
+/* Dark Mode */
+body.dark-mode .navbar {
+  position: fixed; /* Fix navbar at the top */
+  top: 0; /* Position the navbar at the top */
+  left: 0; /* Align to the left */
+  width: 100%; /* Make navbar full width */
+  background-color: black !important; /* Navbar background in dark mode */
+  color: white !important; /* Navbar text color in dark mode */
+  z-index: 9999; /* Ensure navbar stays on top */
+  border-radius: 0; /* No border-radius */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add shadow for better visibility */
+  padding-left: 0; /* Remove any padding on the left */
+  padding-right: 0; /* Remove any padding on the right */
+  max-width: 1900px;
+}
+
+/* Left-aligned brand and toggle button in dark mode */
+body.dark-mode .navbar .container-fluid {
+  display: flex;
+  justify-content: space-between; /* Space out the left and right elements */
+  align-items: center;
+}
+
+body.dark-mode .navbar .navbar-brand {
+  color: white !important; /* Navbar brand color in dark mode */
+  margin-left: 0; /* Ensure no margin on the left */
+}
+
+body.dark-mode .navbar .toggle-container {
+  margin-left: 0; /* Ensure toggle is at the leftmost */
+}
+
+/* Navbar Links in Dark Mode */
+body.dark-mode .navbar .navbar-nav {
+  margin-left: auto; /* Push nav items to the right */
+}
+
+body.dark-mode .navbar .nav-link {
+  color: white !important; /* Navbar links color in dark mode */
+  margin-right: 20px; /* Add space between links */
+}
+
+body.dark-mode .navbar .nav-link:hover {
+  color: #007bff !important; /* Accent color on hover */
+  text-decoration: none;
+}
+
+/* Adjusting content to avoid being hidden behind the fixed navbar */
+body {
+  padding-top: 70px; /* Adjust this value based on your navbar height */
+}

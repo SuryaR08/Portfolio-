@@ -20,49 +20,58 @@
     />
   </head>
   <body>
-    <header class="bg-dark fixed-top">
-      <img src="" alt="">
-      <nav class="container-xxl navbar navbar-expand-lg py-3 bg-dark navbar-dark">
-        <div class="container-fluid">
+    <header class=" fixed-top">
+      <nav class="container-xxl navbar navbar-expand-lg py-3 ">
+        <div class="container-fluid"> 
           <a class="navbar-brand fw-bold fs-3" href="#">Surya R</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <!-- Light/Dark Mode Toggle -->
+          <div class="toggle-container">
+            <label>
+                <input class="toggle-checkbox" type="checkbox" id="modeToggle">
+                <div class="toggle-slot">
+                    <!-- Sun Icon Wrapper -->
+                    <div class="sun-icon-wrapper">
+                        <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></div>
+                    </div>
+        
+                    <!-- Toggle Button -->
+                    <div class="toggle-button"></div>
+        
+                    <!-- Moon Icon Wrapper -->
+                    <div class="moon-icon-wrapper">
+                        <div class="iconify moon-icon" data-icon="feather-moon" data-inline="false"></div>
+                    </div>
+                </div>
+            </label>
+        </div>
+        
+        
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="#skills">SKILLS</a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="#portfolio">PORTFOLIO</a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="#about">ABOUT</a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="#cv">CURRICULUM VITAE</a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="#contact">CONTACT</a>
-              </li>
-              
+              <li class="nav-item mx-2"><a class="nav-link" href="#skills">SKILLS</a></li>
+              <li class="nav-item mx-2"><a class="nav-link" href="#portfolio">PORTFOLIO</a></li>
+              <li class="nav-item mx-2"><a class="nav-link" href="#about">ABOUT</a></li>
+              <li class="nav-item mx-2"><a class="nav-link" href="#cv">CV</a></li>
+              <li class="nav-item mx-2"><a class="nav-link" href="#contact">CONTACT</a></li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
+
     <section class="hero d-flex flex-column align-items-center justify-content-center">
       
       <div class="text-center">
-        <h1 class="h1 text-white fw-medium fst-italic">SURYA R</h1>
-        <h3 class="display-3 text-white fw-bold">Artificial Intelligence and Data Science<br /> Student</h3>
+        <h2 class="h1 text-white fw-medium fst-italic">SURYA R</h2>
+        <h4 class="display-3 text-white fw-bold">Full Stack Developer <br /> </h4>
         <a href="#skills" class="btn btn-lg fs-6 fw-medium mt-5 btn-primary p-3">TELL ME MORE</a>
       </div>
     </section>
     <section class="container py-5" id="skills">
       <div class="row mt-4 py-3">
         <div class="col-12 d-flex flex-column text-center justify-content-center">
-          <h2>SKILLS</h2>
+          <br>
+          <h2 class="skills">SKILLS</h2>
           <h5 class="text-secondary fw-normal py-2 fst-italic">Continuously improving my skills and knowledge</h5>
         </div>
       </div>
@@ -88,8 +97,8 @@
     <!-- Portfolio Section -->
     <section class="container py-5" id="portfolio">
       <div class="row mt-4 py-3">
-        <div class="col-12 d-flex flex-column text-center justify-content-center">
-          <h2>PORTFOLIO</h2>
+        <div class="col-12 d-flex flex-column text-center justify-content-center"> <br>
+          <h2 class="portfolio">PORTFOLIO</h2>
           <h5 class="text-secondary fw-normal py-2 fst-italic">A collection of projects I've worked on.</h5>
         </div>
         <div class="row mt-5 mx-0 justify-content-center align-items-center">
@@ -212,7 +221,8 @@
     <section class="container py-5" id="about">
       <div class="row mt-4 py-3">
         <div class="col-12 d-flex flex-column text-center">
-          <h2>ABOUT</h2>
+          <br>
+          <h2 class="about">ABOUT</h2>
           <h5 class="text-secondary fw-normal py-2 fst-italic">Learn more about me, my background, and what motivates me.</h5>
         </div>
       </div>
@@ -271,8 +281,8 @@
     <!-- Curriculum Vitae Section -->
     <section class="container py-5" id="cv">
       <div class="row mt-4 py-3">
-        <div class="col-12 d-flex flex-column text-center">
-          <h2>CURRICULUM VITAE</h2>
+        <div class="col-12 d-flex flex-column text-center"> <br>
+          <h2 class="cv">CURRICULUM VITAE</h2>
           <h5 class="text-secondary fw-normal py-2 fst-italic">Skilled in developing innovative solutions and leveraging data-driven insights to drive impactful outcomes.</h5>
         </div>
       </div>
@@ -292,7 +302,7 @@
             <a href="https://www.linkedin.com/in/surya-r-a26122236/" target="_blank" class="bg-primary mx-2 text-white d-flex align-items-center justify-content-center text-decoration-none rounded-circle"><i class="fa-brands fa-linkedin-in"></i></a>
             <a href="https://github.com/SuryaR08" target="_blank" class="bg-primary mx-2 text-white d-flex align-items-center justify-content-center text-decoration-none rounded-circle"><i class="fa-brands fa-github"></i></a>
           </ul>
-          <h5>Technical Skills</h5>
+          <h4>Technical Skills</h4>
           <ul class="list-unstyled">
             <li>ReactJs</li>
             <li>NodeJs</li>
@@ -310,7 +320,7 @@
             <li>CSS3</li>
             <li>SQL</li>
           </ul>
-          <h5>Personal Interests</h5>
+          <h4>Personal Interests</h4>
           <ul class="list-unstyled">
             <li>Web Development</li>
             <li>DEVOPS</li>
@@ -401,11 +411,13 @@
       </div>      
     </section>
 
-     <section class="py-5" id="contact">
+    <section class="py-5" id="contact">
       <div class="container-xxl py-5">
         <div class="col-12 d-flex flex-column text-center justify-content-center">
           <h2 class="text-white">CONTACT ME</h2>
-          <h5 class="text-white fw-normal py-2 fst-italic">I am always eager to take on new challenges and explore emerging technologies. Let's connect and discuss how we can create a better future through data-driven solutions!</h5>
+          <h5 class="text-white fw-normal py-2 fst-italic">
+            I am always eager to take on new challenges and explore emerging technologies. Let's connect and discuss how we can create a better future through data-driven solutions!
+          </h5>
         </div>
         <div class="row pt-4 mt-5">
           <div class="col-12">
@@ -413,37 +425,36 @@
               <div class="row d-flex justify-content-center">
                 <div class="col-lg-6">
                   <div class="form-floating mb-3">
-                    <input type="text" 
-                    name="Name" class="form-control" id="floatingInput" placeholder="Enter Name*" required>
-                    <label for="floatingInput">Enter Name*</label>
+                    <input type="text" name="Name" class="form-control" id="floatingName" placeholder="Enter Name*" required>
+                    <label for="floatingName">Enter Name*</label>
                   </div>
                   <div class="form-floating mb-3">
-                    <input type="email"  name="Email" class="form-control" id="floatingEmail" placeholder="Enter Email*" required>
+                    <input type="email" name="Email" class="form-control" id="floatingEmail" placeholder="Enter Email*" required>
                     <label for="floatingEmail">Enter Email*</label>
                   </div>
                   <div class="form-floating mb-3">
-                    <input type="number" name="Phone" class="form-control" id="floatingPassword" placeholder="Enter Phone*" required>
-                    <label for="floatingPassword">Enter Phone*</label>
+                    <input type="number" name="Phone" class="form-control" id="floatingPhone" placeholder="Enter Phone*" required>
+                    <label for="floatingPhone">Enter Phone*</label>
                   </div>
                 </div>
                 <div class="form-floating col-lg-6">
-                  <textarea class="form-control" name="Message"  placeholder="Leave a comment here" id="floatingMessage" style="height: 205px" required></textarea>
+                  <textarea class="form-control" name="Message" placeholder="Leave a comment here" id="floatingMessage" style="height: 205px" required></textarea>
                   <label for="floatingMessage" class="px-4">Enter Message*</label>
                 </div>
                 <div class="col-12 mt-5 d-flex justify-content-center">
-                  <button id='submit-btn' class="btn btn-lg btn-outline-light" type="submit">SEND MESSAGE</button>
+                  <button id="submit-btn" class="btn btn-lg btn-outline-light" type="submit">SEND MESSAGE</button>
                 </div>
               </div>
-  
             </form>
+            <div id="formStatus" class="text-center mt-3"></div>
           </div>
         </div>
-       </div>
-     </section>
-
+      </div>
+    </section>
+    
      <footer>
       <div class="container-xxl flex-wrap pt-3 d-flex align-items-center justify-content-center justify-content-md-between">
-        <p>Copyright © 2023 SURYA</p>
+        <p>Copyright © 2024 SURYA</p>
         <ul class="social-icons d-flex">
           <a href="https://twitter.com/Suryasurya0809" class="bg-primary mx-2 text-white d-flex align-items-center justify-content-center text-decoration-none rounded-circle" target="_blank"><small><i class="fa-brands fa-twitter"></i></small></a>
           <a href="https://www.facebook.com/profile.php?id=100023271851460" class="bg-primary mx-2 text-white d-flex align-items-center justify-content-center text-decoration-none rounded-circle" target="_blank"><small><i class="fa-brands fa-facebook-f"></i></small></a>
@@ -452,10 +463,10 @@
         </ul>
       </div>
      </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="./surya.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
   </body>
 </html>

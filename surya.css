@@ -49,6 +49,7 @@ section {
 
   .text-center {
     text-align: center !important;
+    color: #050506;
   }
 
 
@@ -958,5 +959,10 @@ section {
 }
 
 .text-secondary {
-  color: #6c757d;
+  color: #727f8a;
+  
 }
+
+
+
+
